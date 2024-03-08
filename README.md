@@ -30,12 +30,12 @@ This project levrages Langchain for piepline, weaviate for vectorDB and Stream i
         `!successsful` : `Error: No PDF files present.`
 
 2. `upload.py`: Uploads a pdf to a document directory
-   `Usage`: `python3 upload.py --pdf_file=sample.pdf`
+   `Usage`: `python3 upload.py --pdf_file=name_of_pdf.pdf`
     `Response`:
         `on success` : 
             ```
             Upload successful! 
-            Uploaded path and filename: document/file_1_sample.pdf
+            Uploaded path and filename: document/file_1_name_of_pdf.pdf
             ```
         `!successsful` : `[Errno 2] No such file or directory`
 
