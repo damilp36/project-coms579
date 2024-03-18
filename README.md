@@ -30,25 +30,25 @@ This project levrages Langchain for piepline, weaviate for vectorDB and Stream i
         `!successsful` : `Error: No PDF files present.`
 
 2. `upload.py`: Uploads a pdf to a document directory
-   `Usage`: `python3 upload.py --pdf_file=name_of_pdf.pdf`
+   `Usage`: `python3 upload.py --pdf_file=pdf_name.pdf`
     `Response`:
         `on success` : 
             ```
             Upload successful! 
-            Uploaded path and filename: document/file_1_name_of_pdf.pdf
+            Uploaded path and filename: document/file_1_pdf_name.pdf
             ```
         `!successsful` : `[Errno 2] No such file or directory`
 
 3. `retrieve.py`: Retrieves a pdf by name along with its content
-   `Usage`: `python3 retrieve.py --pdf_file=sample.pdf`
+   `Usage`: `python3 retrieve.py --pdf_file=pdf_name.pdf`
     `Response`:
         `on success` : `{'filename': 'sample.pdf', 'content': "lifelong"}`
-        `!successsful` : `Error: PDF file 'sample.pdf' not found in 'document'`
+        `!successsful` : `Error: PDF file 'pdf_name.pdf' not found in 'document'`
 
 4. `delete.py`: Deletes a pdf by name and returns the current dir count
-   `Usage`: `python3 delete.py --pdf_file=sample.pdf`
+   `Usage`: `python3 delete.py --pdf_file=pdf_name.pdf`
     `Response`:
-        `on success` : `{'filename': 'sample.pdf', 'content': "lifelong"}`
+        `on success` : `{'filename': 'pdf_name.pdf', 'content': "lifelong"}`
         `!successsful` : 
             ```
             PDF count before deletion: 2
