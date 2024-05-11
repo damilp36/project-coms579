@@ -1,16 +1,16 @@
 import os
 import argparse
 import warnings
-import langchain
-from langchain_text_splitters import Language, RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import PyPDFLoader
-from dotenv import load_dotenv
-from langchain_community.vectorstores import FAISS
-from langchain_openai import OpenAIEmbeddings
-from langchain_community.document_loaders import TextLoader
-from langchain_openai import OpenAIEmbeddings
-from langchain_text_splitters import CharacterTextSplitter
-from langchain_community.vectorstores import FAISS
+import langchain  # type: ignore
+from langchain_text_splitters import Language, RecursiveCharacterTextSplitter  # type: ignore
+from langchain_community.document_loaders import PyPDFLoader  # type: ignore
+from dotenv import load_dotenv  # type: ignore
+from langchain_community.vectorstores import FAISS  # type: ignore
+from langchain_openai import OpenAIEmbeddings  # type: ignore
+from langchain_community.document_loaders import TextLoader  # type: ignore
+from langchain_openai import OpenAIEmbeddings  # type: ignore
+from langchain_text_splitters import CharacterTextSplitter  # type: ignore
+from langchain_community.vectorstores import FAISS  # type: ignore
 
 def query(question):
     """
@@ -24,7 +24,7 @@ def query(question):
     OPENAI_API_KEY = os.environ.get('Open_AI_API_Key')
     LANGCHAIN_API_KEY = os.environ.get('Lang_chain_API_Key')
 
-    path_to_pdf = "document/file_text1.pdf"  # Replace with your actual PDF path
+    path_to_pdf = "document/file_proposal.pdf"  # Replace with your actual PDF path
 
     # Load the document, split it into chunks, embed each chunk and load it into the vector store.
     raw_documents = PyPDFLoader(path_to_pdf).load()
@@ -38,7 +38,7 @@ def query(question):
         
         db = FAISS.from_documents(documents, OpenAIEmbeddings())
 
-        docs = db.similarity_search(question, k=2)
+        docs = db.similarity_search(question, k=1)
 
         for doc in docs:
             code_splitter = RecursiveCharacterTextSplitter()
