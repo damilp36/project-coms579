@@ -2,7 +2,7 @@
 
 Retrieval-Augmented Generation for Question-Answering on PDFs
 
-##Link to Youtube Video
+## Link to Youtube Video
 - Milestone 1: https://youtu.be/mkO-TYDTxWk 
 - Milestone 2: https://youtu.be/Q8WnpHwXv9I 
 - Milestone 3:
