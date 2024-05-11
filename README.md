@@ -3,9 +3,9 @@
 Retrieval-Augmented Generation for Question-Answering on PDFs
 
 ##Link to Youtube Video
-Milestone 1: https://youtu.be/mkO-TYDTxWk 
-Milestone 2: https://youtu.be/Q8WnpHwXv9I 
-Milestone 3:
+- Milestone 1: https://youtu.be/mkO-TYDTxWk 
+- Milestone 2: https://youtu.be/Q8WnpHwXv9I 
+- Milestone 3:
 
 ## Overview
 This project provides a Retrieval-Augmented Generation (RAG) based solution for extracting answers from PDF documents. It Leverages LangChain for document processing and answer generation pipelines, LangChain Vectors for embedding, and Streamlit for the user interface.
